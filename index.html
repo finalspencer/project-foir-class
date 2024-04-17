@@ -11,12 +11,75 @@
 </div>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Slider</title>
 <style>
-  body {
-    background-image: url('https://www.bhg.com/thmb/xktLhC5JenSEcBglx37FSUumqTo=/1244x0/filters:no_upscale():strip_icc()/stone-walkway-leading-garden-ccab4820-64cc37892feb45a58001bc53f6ba7aeb.jpg');
-    background-size: cover;
-  }
+  /* Set the background image */
+  body {
+    background-image: url("https://www.marthastewart.com/thmb/NbLHicUgeCrSqCtbyKS8c2vmHzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/garden-trends-hero-d67def0ea07f4129b4011f3d04d7c3f2.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+  }
+
+  /* Add some styling to the slider */
+  #slider {
+    width: 300px;
+  }
+
+  /* Style for the code section */
+  #codeSection {
+    padding: 20px;
+  }
 </style>
+</head>
+<body>
+
+<!-- Start of Code Section -->
+<div id="codeSection">
+<!-- Your HTML content before the slider section -->
+
+<!-- Slider Section -->
+<div id="sliderSection">
+  <!-- Create the slider input element -->
+  <input type="range" min="1" max="100" value="50" id="slider">
+
+  <!-- Display the current value of the slider -->
+  <p id="sliderValue">Value: 50</p>
+</div>
+<!-- End of Slider Section -->
+
+<!-- Your HTML content after the slider section -->
+</div>
+<!-- End of Code Section -->
+
+<script>
+  // JavaScript code for the slider functionality
+
+  // Get the slider element
+  var slider = document.getElementById("slider");
+
+  // Get the paragraph element to display the current value
+  var sliderValue = document.getElementById("sliderValue");
+
+  // Update the paragraph element with the current value of the slider
+  sliderValue.innerHTML = "Value: " + slider.value;
+
+  // Add an event listener to listen for changes in the slider value
+  slider.addEventListener("input", function() {
+    // Update the paragraph element with the new value of the slider
+    sliderValue.innerHTML = "Value: " + this.value;
+  });
+</script>
+
+</body>
+</html>
 
 
 <h4>did you like it? Leave a good review!</h4>
